@@ -1,0 +1,42 @@
+type Asset @entity {
+  id: ID!
+  symbol: String!
+  decimals: BigInt!
+}
+
+type Market @entity {
+  id: ID!
+  lltv: BigInt!
+  oracle: Oracle!
+  lastRate: BigInt!
+
+  lastTotalBorrowShares: BigInt!
+  lastTotalBorrowAssets: BigInt!
+  lastUpdateTimestamp: BigInt!
+
+  loanToken: Asset!
+  collateralToken: Asset!
+
+  positions: [Position!]! @derivedFrom(field: "market")
+}
+
+type Oracle @entity {
+  id: ID!
+  price: BigInt
+  lastPriceFetchTimestamp: BigInt!
+
+  markets: [Market!]! @derivedFrom(field: "oracle")
+}
+
+type Position @entity {
+  id: ID!
+  market: Market!
+  borrower: String!
+  borrowShares: BigInt!
+  collateral: BigInt!
+  lastUpdateTimestamp: BigInt!
+
+  lastBorrowAssets: BigInt!
+  lastPriceUsed: BigInt
+  lastLtv: BigDecimal!
+}

@@ -1,0 +1,157 @@
+[
+    {
+        "type": "constructor",
+        "inputs": [],
+        "stateMutability": "payable"
+    },
+    {
+        "type": "receive",
+        "stateMutability": "payable"
+    },
+    {
+        "type": "function",
+        "name": "MORPHO",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "approveERC20",
+        "inputs": [
+            {
+                "name": "token",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "to",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "morphoLiquidate",
+        "inputs": [
+            {
+                "name": "id",
+                "type": "bytes32",
+                "internalType": "bytes32"
+            },
+            {
+                "name": "borrower",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "seizedAssets",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "pair",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "swapData",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "payable"
+    },
+    {
+        "type": "function",
+        "name": "onMorphoLiquidate",
+        "inputs": [
+            {
+                "name": "repaidAssets",
+                "type": "uint256",
+                "internalType": "uint256"
+            },
+            {
+                "name": "data",
+                "type": "bytes",
+                "internalType": "bytes"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "owner",
+        "inputs": [],
+        "outputs": [
+            {
+                "name": "",
+                "type": "address",
+                "internalType": "address"
+            }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "withdrawERC20",
+        "inputs": [
+            {
+                "name": "token",
+                "type": "address",
+                "internalType": "address"
+            },
+            {
+                "name": "amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "withdrawETH",
+        "inputs": [
+            {
+                "name": "amount",
+                "type": "uint256",
+                "internalType": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "error",
+        "name": "NoProfit",
+        "inputs": []
+    },
+    {
+        "type": "error",
+        "name": "OnlyMorpho",
+        "inputs": []
+    },
+    {
+        "type": "error",
+        "name": "OnlyOwner",
+        "inputs": []
+    }
+]
