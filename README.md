@@ -123,7 +123,7 @@ sequenceDiagram
 
 ### 1.4.1. Liquidator Bot
 
-The main application that coordinates the entire process. it indexes on chain Morpho event to be able to have a quick off chain processing. It's responsible for:
+The main application that coordinates the entire process. it indexes on chain Morpho events to have a quick off chain processing. It's responsible for:
 
 - Monitoring Morpho positions
 - Performing health checks
@@ -145,10 +145,10 @@ The bot requires several configuration parameters:
 
 - `ARCHIVE_URL`: The URL of the Subsquid archive node
 - `START_BLOCK`: The block number from which to start indexing events
-- `RPC_ETH_HTTP`: The Ethereum RPC endpoint
+- `RPC_ETH_HTTP`: The EVM RPC endpoint
 - `EXECUTOR_PK`: The private key for transaction execution
 - `ONEINCH_API_KEY`: The API key for the 1Inch API
-- `CHAIN_ID`: The Ethereum chain ID
+- `CHAIN_ID`: The EVM chain ID
 
 ## 1.6. Usage
 
